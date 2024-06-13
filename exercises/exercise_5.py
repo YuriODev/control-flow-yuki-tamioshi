@@ -1,15 +1,14 @@
-x1 = int(input("Enter x1: "))
-y1 = int(input("Enter y1: "))
-x2 = int(input("Enter x2: "))
-y2 = int(input("Enter y2: "))
-
-distance_a = math.sqrt(x1**2 + y1**2)
-distance_b = math.sqrt(x2**2 + y2**2)
-
-if distance_a > distance_b:
-  print("B is further from the origin.")
-elif distance_b > distance_a:
-  print("A is further from the origin.")
+a = float(input("Enter coefficient a: "))
+b = float(input("Enter coefficient b: "))
+c = float(input("Enter coefficient c: "))
+discriminant = b**2 - 4 * a * c
+if discriminant > 0:
+  root1 = (-b + discriminant**0.5) / (2 * a)
+  root2 = (-b - discriminant**0.5) / (2 * a)
+  print(f"{root1:.2f} and {root2:.2f}")
+elif discriminant == 0:
+  root = (-b + discriminant**0.5) / (2 * a)
+  print(f"{root:.2f}")
 else:
-  print("A and B are at the same distance from the origin.")
+  print("No roots.")
 
